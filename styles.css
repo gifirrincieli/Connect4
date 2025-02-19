@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #eee;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+footer {
+background-color: #333;
+color: #fff;
+text-align: center;
+padding: 10px 0;
+}
+
+
+a {
+color: yellow;
+}
+
+a:visited {
+color: purple;
+}
+
+a:hover {
+color: green;
+}
+
+a:active {
+color: orange;
+}
+
+
+
+#setup {
+  background-color: lightgreen;
+  border: 2px solid #000;
+  border-radius: 8px;
+  padding: 100px;
+  margin-bottom: 200px;
+}
+
+#setup h1 {
+  color: #000;
+  margin-bottom: 10px;
+}
+
+label {
+  display: inline-block;
+  width: 140px;
+  color: #000;
+  font-weight: bold;
+}
+
+.input-container {
+  margin: 25px 0;
+}
+
+input[type="text"] {
+  width: 120px;
+  padding: 5px;
+  border: 5px solid #ccc;
+  border-radius: 10px;
+}
+input[type="text"].invalid {
+  background-color: orange;
+}
+
+#startBtn {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: #fff;
+}
+#startBtn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+
+#game {
+display: none;
+  width: 100%;
+  flex-direction: row;    
+  align-items: center;
+  justify-content: center;
+  gap: 40px;              
+  padding: 100px;
+
+
+}
+
+
+#scoreboard {
+  font-size: 1.2rem;
+  font-weight: bold;
+  background-color: lightgoldenrodyellow;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  min-width: 200px;
+}
+
+
+#boardContainer {
+  display: inline-block;
+}
+
+table#board {
+  border-collapse: collapse;
+  background-color: #333;
+}
+table#board td {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #444;
+  background-color: lightblue;
+  cursor: pointer;
+}
+
+
+.red {
+  background-color: red !important;
+}
+.yellow {
+  background-color: yellow !important;
+}
+
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+  z-index: 999;
+}
+#overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
